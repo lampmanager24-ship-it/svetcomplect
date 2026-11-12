@@ -1,0 +1,22 @@
+export const embeddedPointsProducts = [
+  { id: 1, name: 'Світильник точковий LED', specs: "80*45 GX53 вбудований", price: 170, image: '/images/pointsImg/point17.jpg' },
+  { id: 2, name: 'Світильник точковий LED', specs: "gx53 105х46 вбудований", price: 204, image: '/images/pointsImg/point1.jpg' },
+  { id: 3, name: 'Світильник точковий LED', specs: "gx53 105х46 вбудований", price: 204, image: '/images/pointsImg/point2.jpg' },
+  { id: 4, name: 'Світильник точковий LED', specs: "80*45 GX53 вбудований", price: 170, image: '/images/pointsImg/point18.jpg' },
+  { id: 5, name: 'Світильник точковий LED', specs: "розмір 110*55 вбудований GX53", price: 265, image: '/images/pointsImg/point19.jpg' },
+  { id: 6, name: 'Світильник точковий LED', specs: "розмір 110*55 вбудований GX53", price: 265, image: '/images/pointsImg/point20.jpg' },
+  { id: 7, name: 'Світильник точковий LED', specs: "gu10 mr16 g5.3 92х30", price: 199, image: '/images/pointsImg/point3.jpg' },
+  { id: 8, name: 'Світильник точковий LED', specs: "gu10 mr16 g5.3 92х30", price: 199, image: '/images/pointsImg/point4.jpg' },
+  { id: 9, name: 'Світильник точковий LED', specs: "gu10 mr16 174*92*25мм", price: 370, image: '/images/pointsImg/point5.jpg' },
+  { id: 10, name: 'Світильник точковий LED', specs: "gu10 mr16 174*92*25мм", price: 370, image: '/images/pointsImg/point6.jpg' },
+  { id: 11, name: 'Світильник точковий LED', specs: "GX53 110*110*40 мм", price: 194, image: '/images/pointsImg/point7.jpg' },
+  { id: 12, name: 'Світильник точковий LED', specs: "GX53 110*110*40 мм", price: 190, image: '/images/pointsImg/point8.jpg' },
+  { id: 13, name: 'Світильник точковий LED', specs: "GX53 105*40 мм", price: 205, image: '/images/pointsImg/point9.jpg' },
+  { id: 14, name: 'Світильник точковий LED', specs: "GX53 105*40 мм", price: 205, image: '/images/pointsImg/point10.jpg' },
+  { id: 15, name: 'Світильник точковий LED', specs: "MR16 G5.3 80*32 мм", price: 152, image: '/images/pointsImg/point11.jpg' },
+  { id: 16, name: 'Світильник точковий LED', specs: "MR16 G5.3 80*32 мм", price: 152, image: '/images/pointsImg/point12.jpg' },
+  { id: 17, name: 'Світильник точковий LED', specs: "GX53 105*105*36 мм", price: 189, image: '/images/pointsImg/point13.jpg' },
+  { id: 18, name: 'Світильник точковий LED', specs: "GX53 105*105*36 мм", price: 189, image: '/images/pointsImg/point14.jpg' },
+  { id: 19, name: 'Світильник точковий LED', specs: "MR16 G5.3 92*92*30 мм", price: 225, image: '/images/pointsImg/point15.jpg' },
+  { id: 20, name: 'Світильник точковий LED', specs: "MR16 G5.3 92*92*30 мм", price: 225, image: '/images/pointsImg/point16.jpg' }
+];

@@ -1,0 +1,233 @@
+/* Основні скидання та шрифти */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    color: #4a5568;
+    line-height: 1.5;
+}
+
+/* Центральний контейнер з обмеженням ширини (стандарт 1200px) */
+.site-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- ШАПКА ТА НАВІГАЦІЯ --- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0 30px 0;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin: 0 auto; /* вирівнювання по центру шапки */
+}
+
+.btn-nav {
+    text-decoration: none;
+    color: #4a5568;
+    font-size: 16px;
+    font-weight: 500;
+    transition: transform 0.2s ease, color 0.2s ease;
+    display: inline-block;
+}
+
+/* Ефект збільшення кнопок при наведенні */
+.btn-nav:hover {
+    transform: scale(1.08);
+    color: #1a202c;
+}
+
+.phone-link {
+    font-weight: 600;
+}
+
+/* Кошик у правій частині */
+.cart-wrapper {
+    position: absolute;
+    right: 0;
+}
+
+.btn-cart {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f7f8fa;
+    border: 1px solid #e2e8f0;
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: #4a5568;
+    cursor: pointer;
+    font-weight: 500;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-cart:hover {
+    transform: scale(1.05);
+    background-color: #edf2f7;
+    color: #1a202c;
+}
+
+.cart-count {
+    background-color: #4a5568;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 2px 7px;
+    border-radius: 10px;
+}
+
+/* --- МАРКЕТИНГОВИЙ БЛОК (HERO) --- */
+.hero-card {
+    background-color: #f7f8fa;
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 40px;
+}
+
+.hero-card h1 {
+    font-size: 28px;
+    color: #2d3748;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.hero-card p {
+    font-size: 17px;
+    color: #4a5568;
+    max-width: 1000px;
+}
+
+/* --- СІТКА КАТЕГОРІЙ --- */
+.categories-grid {
+    display: grid;
+    /* Десктоп: 5 карточок в ряд */
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.category-card {
+    background-color: #f7f8fa;
+    border-radius: 12px;
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Квадратна область під зображення */
+.card-image-wrap {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover .card-image-wrap img {
+    transform: scale(1.05);
+}
+
+.category-card h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #4a5568;
+    text-transform: lowercase;
+}
+
+/* --- АДАПТИВНІСТЬ --- */
+
+/* Планшети (до 992px) */
+@media (max-width: 992px) {
+    .categories-grid {
+        /* 2 карточки в ряд */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .hero-card {
+        padding: 30px;
+    }
+
+    .hero-card h1 {
+        font-size: 24px;
+    }
+}
+
+/* Мобільні пристрої (до 600px) */
+@media (max-width: 600px) {
+    .main-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .cart-wrapper {
+        position: static;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero-card {
+        padding: 20px;
+        margin-bottom: 25px;
+    }
+
+    .hero-card h1 {
+        font-size: 20px;
+    }
+
+    .hero-card p {
+        font-size: 15px;
+    }
+
+    .categories-grid {
+        /* Теж по 2 в ряд, але трохи менші відступи */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .category-card {
+        padding: 10px;
+    }
+
+    .category-card h3 {
+        font-size: 13px;
+    }
+}
