@@ -10,7 +10,7 @@
         <a href="tel:+380638533794" class="btn-nav phone-link">063 853 37 94</a>
         
         <div class="messenger-links">
-          <a href="https://t.me/chandelier_manager" target="_blank" rel="noopener noreferrer" class="messenger-btn telegram-btn">Telegram</a>
+          <a href="https://t.me/changelier_manager" target="_blank" rel="noopener noreferrer" class="messenger-btn telegram-btn">Telegram</a>
           <a href="viber://chat?number=%2B380638533794" class="messenger-btn viber-btn">Viber</a>
         </div>
       </nav>
@@ -142,9 +142,9 @@
         <div class="modal-body consultation-body">
           <p class="consultation-desc">Оберіть зручний спосіб зв'язку з нами:</p>
           <div class="consultation-buttons">
-            <a href="https://t.me/0680910306" target="_blank" rel="noopener noreferrer" class="con-btn telegram">Telegram</a>
-            <a href="viber://chat?number=%2B380680910306" class="con-btn viber">Viber</a>
-            <a href="tel:+380680910306" class="con-btn phone">068 091 03 06</a>
+            <a href="https://t.me/changelier_manager" target="_blank" rel="noopener noreferrer" class="con-btn telegram">Telegram</a>
+            <a href="viber://chat?number=%2B380638533794" class="con-btn viber">Viber</a>
+            <a href="tel:+380638533794" class="con-btn phone">063 853 37 94</a>
           </div>
         </div>
       </div>
@@ -357,16 +357,17 @@ export default {
 .main-header {
   position: sticky;
   top: 8px;
-  background-color: #ffffff;
+  background-color: var(--bg-card, #ffffff);
   z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 12px;
   border-radius: 10px;
-  border: 1px solid #eaeaea;
+  border: 1px solid var(--border-color, #eaeaea);
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   gap: 8px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .page-content { padding-top: 15px; }
@@ -375,12 +376,12 @@ export default {
   display: flex;
   gap: 8px;
   align-items: center;
-  flex-wrap: wrap; /* Дозволяє акуратно переноситися на дуже вузьких екранах */
+  flex-wrap: wrap;
 }
 
 .btn-nav {
   text-decoration: none;
-  color: #333;
+  color: var(--text-main, #333);
   font-weight: 500;
   font-size: 12px;
   white-space: nowrap;
@@ -389,7 +390,7 @@ export default {
 
 .phone-link {
   font-weight: 600;
-  color: #111;
+  color: var(--text-main, #111);
   font-size: 12px;
 }
 
@@ -413,8 +414,9 @@ export default {
   display: flex;
   align-items: center;
   gap: 5px;
-  background: #f5f5f7;
-  border: 1px solid #d2d2d7;
+  background: var(--bg-card, #f5f5f7);
+  border: 1px solid var(--border-color, #d2d2d7);
+  color: var(--text-main, #111);
   padding: 5px 10px;
   border-radius: 16px;
   cursor: pointer;
@@ -440,7 +442,7 @@ export default {
   background-color: rgba(0, 0, 0, 0.55);
   display: flex;
   justify-content: center;
-  align-items: center; /* Рівно по центру по вертикалі */
+  align-items: center;
   z-index: 1000;
   backdrop-filter: blur(3px);
   padding: 10px;
@@ -448,16 +450,17 @@ export default {
 }
 
 .modal-window {
-  background: #ffffff;
+  background: var(--bg-card, #ffffff);
   width: 100%;
   max-width: 420px;
-  max-height: 85vh; /* Щоб вікно ніколи не вилазило за краї екрана мобільного */
+  max-height: 85vh;
   display: flex;
   flex-direction: column;
   border-radius: 12px;
+  border: 1px solid var(--border-color, #eaeaea);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   overflow: hidden;
-  margin: auto; /* Додатковий захист від зсувів */
+  margin: auto;
 }
 
 .modal-header {
@@ -465,22 +468,22 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 12px 16px;
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid var(--border-color, #eaeaea);
   flex-shrink: 0;
 }
-.modal-header h2 { font-size: 15px; font-weight: 600; margin: 0; color: #111; }
+.modal-header h2 { font-size: 15px; font-weight: 600; margin: 0; color: var(--text-main, #111); }
 
 .close-btn {
   background: transparent;
   border: none;
   cursor: pointer;
-  color: #666;
+  color: var(--text-secondary, #666);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 4px;
 }
-.close-btn:hover { color: #111; }
+.close-btn:hover { color: var(--text-main, #111); }
 
 .modal-body {
   padding: 15px;
@@ -488,7 +491,7 @@ export default {
   flex-grow: 1;
 }
 
-/* КАРТКИ ВИБОРУ У МОДАЛКАХ (ВЕРТИКАЛЬНО НА МОБІЛЬНИХ) */
+/* КАРТКИ ВИБОРУ У МОДАЛКАХ */
 .points-choice-body {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -497,7 +500,7 @@ export default {
 
 @media (max-width: 576px) {
   .points-choice-body {
-    grid-template-columns: 1fr; /* Одна під одною на телефонах */
+    grid-template-columns: 1fr;
   }
 }
 
@@ -506,9 +509,9 @@ export default {
   flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: #111;
-  background: #f9f9f9;
-  border: 1px solid #eaeaea;
+  color: var(--text-main, #111);
+  background: var(--bg-card, #f9f9f9);
+  border: 1px solid var(--border-color, #eaeaea);
   border-radius: 10px;
   padding: 12px;
   transition: 0.2s;
@@ -518,7 +521,7 @@ export default {
 .points-choice-img {
   width: 100%;
   height: 85px;
-  background: #fff;
+  background: var(--bg-card, #fff);
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -531,33 +534,47 @@ export default {
 
 /* Стилі кошика та форм */
 .cart-body { text-align: left; }
-.empty-text { color: #777; text-align: center; margin: 0; font-size: 13px; }
+.empty-text { color: var(--text-secondary, #777); text-align: center; margin: 0; font-size: 13px; }
 .cart-items-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px; }
-.cart-item { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px; background: #f9f9f9; border-radius: 8px; border: 1px solid #eaeaea; }
-.cart-item-img { width: 38px; height: 38px; background: #fff; border-radius: 6px; display: flex; align-items: center; justify-content: center; padding: 3px; flex-shrink: 0; }
+.cart-item { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 8px; background: var(--bg-card, #f9f9f9); border-radius: 8px; border: 1px solid var(--border-color, #eaeaea); }
+.cart-item-img { width: 38px; height: 38px; background: var(--bg-card, #fff); border-radius: 6px; display: flex; align-items: center; justify-content: center; padding: 3px; flex-shrink: 0; }
 .cart-item-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
 .cart-item-info { flex-grow: 1; min-width: 0; }
-.cart-item-specs { font-size: 11px; color: #555; margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.cart-item-specs { font-size: 11px; color: var(--text-secondary, #555); margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .cart-item-price-wrap { text-align: center; min-width: 60px; flex-shrink: 0; }
 .cart-item-price { font-size: 12px; font-weight: 700; color: #0066cc; }
-.cart-item-counter { display: flex; align-items: center; gap: 4px; background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 2px 4px; flex-shrink: 0; }
-.count-btn { background: transparent; border: none; cursor: pointer; font-weight: 600; font-size: 12px; }
+.cart-item-counter { display: flex; align-items: center; gap: 4px; background: var(--bg-card, #fff); border: 1px solid var(--border-color, #ddd); border-radius: 6px; padding: 2px 4px; flex-shrink: 0; color: var(--text-main, #111); }
+.count-btn { background: transparent; border: none; cursor: pointer; font-weight: 600; font-size: 12px; color: inherit; }
 .remove-btn { background: transparent; border: none; color: #ff3b30; cursor: pointer; flex-shrink: 0; }
-.cart-footer-action { border-top: 1px solid #eaeaea; padding-top: 10px; display: flex; flex-direction: column; gap: 8px; }
-.total-amount { display: flex; justify-content: space-between; font-size: 13px; }
+.cart-footer-action { border-top: 1px solid var(--border-color, #eaeaea); padding-top: 10px; display: flex; flex-direction: column; gap: 8px; }
+.total-amount { display: flex; justify-content: space-between; font-size: 13px; color: var(--text-main, #111); }
 .total-amount strong { font-size: 15px; color: #0066cc; }
 .btn-proceed-order { background-color: #111; color: #fff; border: none; padding: 10px; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 13px; }
 .checkout-form { display: flex; flex-direction: column; gap: 8px; }
 .form-group { display: flex; flex-direction: column; gap: 3px; }
-.form-group label { font-size: 11px; font-weight: 500; }
-.form-group input, .form-group textarea { padding: 7px; border: 1px solid #d2d2d7; border-radius: 6px; font-size: 12px; outline: none; }
+.form-group label { font-size: 11px; font-weight: 500; color: var(--text-main, #111); }
+.form-group input, .form-group textarea { padding: 7px; border: 1px solid var(--border-color, #d2d2d7); background: var(--bg-card, #fff); color: var(--text-main, #111); border-radius: 6px; font-size: 12px; outline: none; }
 .checkout-buttons { display: flex; gap: 8px; margin-top: 6px; }
-.btn-back-cart { background: #f5f5f7; border: 1px solid #d2d2d7; padding: 9px; border-radius: 8px; flex: 1; cursor: pointer; font-size: 12px; }
+.btn-back-cart { background: var(--bg-card, #f5f5f7); border: 1px solid var(--border-color, #d2d2d7); color: var(--text-main, #111); padding: 9px; border-radius: 8px; flex: 1; cursor: pointer; font-size: 12px; }
 .btn-make-order { background-color: #0066cc; color: #fff; border: none; padding: 9px; border-radius: 8px; flex: 1.5; cursor: pointer; font-weight: 600; font-size: 12px; }
 .consultation-body { display: flex; flex-direction: column; gap: 12px; text-align: center; }
-.consultation-desc { font-size: 13px; color: #555; margin: 0; }
+.consultation-desc { font-size: 13px; color: var(--text-secondary, #555); margin: 0; }
 .consultation-buttons { display: flex; flex-direction: column; gap: 8px; }
 .con-btn { display: block; text-decoration: none; padding: 10px; border-radius: 8px; font-weight: 600; color: #fff; font-size: 13px; }
 .con-btn.telegram { background-color: #24a1de; }
 .con-btn.viber { background-color: #7360f2; }
 .con-btn.phone { background-color: #111; }
+
+/* Ефект збільшення при наведенні для кнопок і посилань у шапці */
+.main-header .btn-nav,
+.main-header .messenger-btn,
+.main-header .btn-cart {
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.main-header .btn-nav:hover,
+.main-header .messenger-btn:hover,
+.main-header .btn-cart:hover {
+  transform: scale(1.06);
+}
+</style>
