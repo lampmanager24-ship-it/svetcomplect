@@ -18,12 +18,16 @@ const routes = [
   
   // Магнітні треки
   { path: '/magnetic/rails', component: CategoryView, props: { categoryType: 'magnetic-rails' } },
-  { path: '/magnetic/fixtures', component: CategoryView, props: { categoryType: 'magnetic-fixtures' } }
+  { path: '/magnetic/fixtures', component: CategoryView, props: { categoryType: 'magnetic-fixtures' } },
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  // Щоб при переході сторінка завжди відкривалася з самого верху, а не посередині
+  scrollBehavior() {
+    return { top: 0 }
+  }
 })
 
 export default router
