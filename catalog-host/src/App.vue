@@ -7,11 +7,11 @@
         <router-link v-if="isHome" to="/about" class="btn-nav">Про нас</router-link>
         <router-link v-else to="/" class="btn-nav">До головної</router-link>
 
-        <a href="tel:+380680910306" class="btn-nav phone-link">068 091 03 06</a>
+        <a href="tel:+380638533794" class="btn-nav phone-link">063 853 37 94</a>
         
         <div class="messenger-links">
-          <a href="https://t.me/0680910306" target="_blank" rel="noopener noreferrer" class="messenger-btn telegram-btn">Telegram</a>
-          <a href="viber://chat?number=%2B380680910306" class="messenger-btn viber-btn">Viber</a>
+          <a href="https://t.me/chandelier_manager" target="_blank" rel="noopener noreferrer" class="messenger-btn telegram-btn">Telegram</a>
+          <a href="viber://chat?number=%2B380638533794" class="messenger-btn viber-btn">Viber</a>
         </div>
       </nav>
 
@@ -564,5 +564,17 @@ export default {
 body {
   background-color: #ffffff; /* або твій колір фону сайту */
   color: #222222;
+}
+
+/* Приклад для картки товару та верхньої плаваючої панелі */
+.product-card, .header-bar {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+}
+
+/* Для дрібного опису характеристик (наприклад, "6вт 630мм 3600к") */
+.product-specs {
+  color: var(--text-secondary);
 }
 </style>
