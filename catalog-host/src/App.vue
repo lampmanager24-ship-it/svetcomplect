@@ -561,20 +561,3 @@ export default {
 .con-btn.telegram { background-color: #24a1de; }
 .con-btn.viber { background-color: #7360f2; }
 .con-btn.phone { background-color: #111; }
-body {
-  background-color: #ffffff; /* або твій колір фону сайту */
-  color: #222222;
-}
-
-/* Приклад для картки товару та верхньої плаваючої панелі */
-.product-card, .header-bar {
-  background-color: var(--bg-card);
-  color: var(--text-main);
-  border: 1px solid var(--border-color);
-}
-
-/* Для дрібного опису характеристик (наприклад, "6вт 630мм 3600к") */
-.product-specs {
-  color: var(--text-secondary);
-}
-</style>

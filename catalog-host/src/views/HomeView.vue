@@ -107,7 +107,10 @@ export default {
     scrollToCatalog() {
       const catalogElement = document.getElementById('catalog-section');
       if (catalogElement) {
-        catalogElement.scrollIntoView({ behavior: 'smooth' });
+        // Виправляємо занадто низький скрол: робимо поправку на висоту шапки (~70px)
+        const yOffset = -70; 
+        const y = catalogElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
       }
     }
   }
@@ -115,33 +118,140 @@ export default {
 </script>
 
 <style scoped>
-.hero-card {
-  background: #f9f9f9; border-radius: 12px; padding: 30px; text-align: center; margin-bottom: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+.home-page {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
 }
-.hero-card h1 { font-size: 26px; line-height: 1.4; margin-bottom: 15px; color: #111; }
-.hero-card p { color: #555; font-size: 14px; max-width: 900px; margin: 0 auto; line-height: 1.5; margin-bottom: 24px; }
-.hero-buttons { display: flex; flex-direction: column; align-items: center; gap: 12px; }
-.btn-consultation { background-color: #111; color: #fff; border: none; padding: 12px 24px; font-size: 15px; font-weight: 600; border-radius: 8px; cursor: pointer; transition: 0.2s; }
-.btn-consultation:hover { background-color: #333; transform: scale(1.04); }
-.btn-to-catalog { background-color: #ffffff; border: 1.5px solid #d2d2d7; color: #1d1d1f; font-size: 14px; font-weight: 500; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: 0.2s; }
-.btn-to-catalog:hover { background-color: #f5f5f7; border-color: #0066cc; color: #0066cc; transform: scale(1.04); }
 
-.categories-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.hero-card {
+  background: var(--bg-card, #f9f9f9);
+  border: 1px solid var(--border-color, #eaeaea);
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.hero-card h1 { 
+  font-size: 26px; 
+  line-height: 1.4; 
+  margin-bottom: 15px; 
+  color: var(--text-main, #111); 
+}
+
+.hero-card p { 
+  color: var(--text-secondary, #555); 
+  font-size: 14px; 
+  max-width: 900px; 
+  margin: 0 auto; 
+  line-height: 1.5; 
+  margin-bottom: 24px; 
+}
+
+.hero-buttons { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  gap: 12px; 
+}
+
+.btn-consultation { 
+  background-color: var(--text-main, #111); 
+  color: var(--bg-card, #fff); 
+  border: none; 
+  padding: 12px 24px; 
+  font-size: 15px; 
+  font-weight: 600; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  transition: 0.2s; 
+}
+
+.btn-consultation:hover { 
+  opacity: 0.9; 
+  transform: scale(1.04); 
+}
+
+.btn-to-catalog { 
+  background-color: var(--bg-card, #ffffff); 
+  border: 1.5px solid var(--border-color, #d2d2d7); 
+  color: var(--text-main, #1d1d1f); 
+  font-size: 14px; 
+  font-weight: 500; 
+  padding: 10px 20px; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  transition: 0.2s; 
+}
+
+.btn-to-catalog:hover { 
+  border-color: #0066cc; 
+  color: #0066cc; 
+  transform: scale(1.04); 
+}
+
+.categories-grid { 
+  display: grid; 
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 16px; 
+}
 
 .category-card, .points-card-trigger {
-  background: #fff; border: 1px solid #eaeaea; border-radius: 10px; overflow: hidden;
-  text-decoration: none; color: inherit; display: flex; flex-direction: column;
-  width: 100%; max-width: 240px; margin: 0 auto; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  transition: transform 0.25s ease, box-shadow 0.25s ease; cursor: pointer;
+  background: var(--bg-card, #fff); 
+  border: 1px solid var(--border-color, #eaeaea); 
+  border-radius: 10px; 
+  overflow: hidden;
+  text-decoration: none; 
+  color: inherit; 
+  display: flex; 
+  flex-direction: column;
+  width: 100%; 
+  max-width: 240px; 
+  margin: 0 auto; 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.2s ease; 
+  cursor: pointer;
 }
+
 .category-card:hover, .points-card-trigger:hover {
-  transform: translateY(-4px) scale(1.03); box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transform: translateY(-4px) scale(1.03); 
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
-.card-image-wrap { width: 100%; height: 130px; background: #fdfdfd; display: flex; align-items: center; justify-content: center; padding: 10px; box-sizing: border-box; }
-.card-image-wrap img { max-width: 100%; max-height: 100%; object-fit: contain; }
-.category-card h3, .points-card-trigger h3 { padding: 12px 8px; font-size: 13px; text-align: center; margin: 0; color: #333; font-weight: 600; text-transform: lowercase; }
+
+.card-image-wrap { 
+  width: 100%; 
+  height: 130px; 
+  background: var(--bg-card, #fdfdfd); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 10px; 
+  box-sizing: border-box; 
+}
+
+.card-image-wrap img { 
+  max-width: 100%; 
+  max-height: 100%; 
+  object-fit: contain; 
+}
+
+.category-card h3, .points-card-trigger h3 { 
+  padding: 12px 8px; 
+  font-size: 13px; 
+  text-align: center; 
+  margin: 0; 
+  color: var(--text-main, #333); 
+  font-weight: 600; 
+  text-transform: lowercase; 
+}
 
 @media (max-width: 640px) {
-  .categories-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .categories-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 12px; 
+  }
 }
 </style>
