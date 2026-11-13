@@ -65,7 +65,6 @@
 </template>
 
 <script setup>
-// Подія для відкриття модального вікна консультації в App.vue
 defineEmits(['open-consultation'])
 </script>
 
@@ -81,13 +80,13 @@ defineEmits(['open-consultation'])
   text-align: center;
   margin-bottom: 30px;
   padding-bottom: 15px;
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid var(--border-color, #eaeaea);
 }
 
 .about-header h1 {
   font-size: 26px;
   margin: 0;
-  color: #111;
+  color: var(--text-main, #111);
   line-height: 1.3;
 }
 
@@ -98,15 +97,16 @@ defineEmits(['open-consultation'])
 }
 
 .about-intro {
-  background: #f9f9f9;
+  background: var(--bg-card, #f9f9f9);
   padding: 24px;
   border-radius: 12px;
-  border: 1px solid #eaeaea;
+  border: 1px solid var(--border-color, #eaeaea);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .about-intro p {
   font-size: 15px;
-  color: #444;
+  color: var(--text-secondary, #444);
   line-height: 1.6;
   margin: 0;
   text-align: center;
@@ -119,75 +119,78 @@ defineEmits(['open-consultation'])
 }
 
 .about-card {
-  background: #fff;
+  background: var(--bg-card, #fff);
   padding: 24px;
   border-radius: 12px;
-  border: 1px solid #eaeaea;
+  border: 1px solid var(--border-color, #eaeaea);
   box-shadow: 0 2px 8px rgba(0,0,0,0.02);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .about-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.06);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
 }
 
 .about-card h2 {
   font-size: 18px;
-  color: #111;
+  color: var(--text-main, #111);
   margin-top: 0;
   margin-bottom: 12px;
 }
 
 .about-card p {
   font-size: 14px;
-  color: #555;
+  color: var(--text-secondary, #555);
   line-height: 1.5;
   margin: 0;
 }
 
 .about-clients {
-  background: #fdfdfd;
+  background: var(--bg-card, #fdfdfd);
   padding: 24px;
   border-radius: 12px;
-  border: 1px solid #eaeaea;
+  border: 1px solid var(--border-color, #eaeaea);
   text-align: center;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .about-clients h2 {
   font-size: 18px;
-  color: #111;
+  color: var(--text-main, #111);
   margin-top: 0;
   margin-bottom: 10px;
 }
 
 .about-clients p {
   font-size: 14px;
-  color: #555;
+  color: var(--text-secondary, #555);
   margin: 0;
 }
 
 .about-cta {
   text-align: center;
   padding: 30px;
-  background: #f5f5f7;
+  background: var(--bg-card, #f5f5f7);
+  border: 1px solid var(--border-color, #eaeaea);
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .cta-text {
   font-size: 16px;
-  color: #333;
+  color: var(--text-main, #333);
   font-weight: 500;
   margin: 0;
 }
 
 .btn-consultation {
-  background-color: #111;
-  color: #fff;
+  background-color: var(--text-main, #111);
+  color: var(--bg-card, #fff);
   border: none;
   padding: 12px 28px;
   font-size: 15px;
@@ -198,11 +201,10 @@ defineEmits(['open-consultation'])
 }
 
 .btn-consultation:hover {
-  background-color: #333;
+  opacity: 0.9;
   transform: scale(1.04);
 }
 
-/* Мобільна адаптивність */
 @media (max-width: 768px) {
   .about-grid {
     grid-template-columns: 1fr;

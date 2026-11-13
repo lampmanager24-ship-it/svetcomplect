@@ -109,13 +109,19 @@ const handleAddToCart = (product) => {
   text-align: center;
   margin-bottom: 20px;
   padding-bottom: 12px;
-  border-bottom: 1px solid #eaeaea;
+  border-bottom: 1px solid var(--border-color, #eaeaea);
 }
 
 .category-header h1 {
   font-size: 20px;
   margin: 0;
-  color: #111;
+  color: var(--text-main, #111);
+}
+
+.no-products {
+  text-align: center;
+  color: var(--text-secondary, #666);
+  padding: 40px 0;
 }
 
 .products-grid {
@@ -125,31 +131,32 @@ const handleAddToCart = (product) => {
 }
 
 .product-card {
-  background: #fff;
-  border: 1px solid #eaeaea;
+  background: var(--bg-card, #fff);
+  border: 1px solid var(--border-color, #eaeaea);
   border-radius: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .product-card:hover {
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
 .product-img-wrap {
   width: 100%;
   height: 160px;
-  background: #fdfdfd;
+  background: var(--bg-card, #fdfdfd);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 10px;
   box-sizing: border-box;
+  transition: background-color 0.2s ease;
 }
 
 .product-img-wrap img {
@@ -168,12 +175,12 @@ const handleAddToCart = (product) => {
 .product-details h3 {
   font-size: 14px;
   margin: 0 0 6px 0;
-  color: #222;
+  color: var(--text-main, #222);
 }
 
 .product-specs {
   font-size: 12px;
-  color: #666;
+  color: var(--text-secondary, #666);
   margin-bottom: 12px;
   line-height: 1.3;
 }
@@ -189,12 +196,12 @@ const handleAddToCart = (product) => {
 .product-price {
   font-size: 15px;
   font-weight: 700;
-  color: #111;
+  color: var(--text-main, #111);
 }
 
 .btn-buy {
-  background: rgba(52, 152, 219, 0.1);
-  color: #555555;
+  background: rgba(52, 152, 219, 0.15);
+  color: #3498db;
   border: none;
   padding: 6px 12px;
   border-radius: 6px;
@@ -205,11 +212,11 @@ const handleAddToCart = (product) => {
 }
 
 .btn-buy:hover {
-  background: rgba(52, 152, 219, 0.2);
+  background: rgba(52, 152, 219, 0.3);
 }
 
 .btn-buy.added {
-  background: rgba(41, 128, 185, 0.2);
+  background: rgba(41, 128, 185, 0.3);
   color: #2980b9;
   font-weight: 600;
 }
@@ -221,7 +228,7 @@ const handleAddToCart = (product) => {
   }
   
   .product-img-wrap {
-    height: 110px; /* Робіть картинки компактнішими, щоб картки були майже квадратними */
+    height: 110px;
   }
 
   .product-details { padding: 8px; }
