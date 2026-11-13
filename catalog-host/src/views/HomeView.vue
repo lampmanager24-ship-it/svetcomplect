@@ -107,7 +107,6 @@ export default {
     scrollToCatalog() {
       const catalogElement = document.getElementById('catalog-section');
       if (catalogElement) {
-        // Виправляємо занадто низький скрол: робимо поправку на висоту шапки (~70px)
         const yOffset = -70; 
         const y = catalogElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
         window.scrollTo({ top: y, behavior: 'smooth' });
@@ -212,13 +211,13 @@ export default {
   max-width: 240px; 
   margin: 0 auto; 
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.2s ease; 
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.2s ease, border-color 0.2s ease; 
   cursor: pointer;
 }
 
 .category-card:hover, .points-card-trigger:hover {
   transform: translateY(-4px) scale(1.03); 
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .card-image-wrap { 
@@ -230,6 +229,7 @@ export default {
   justify-content: center; 
   padding: 10px; 
   box-sizing: border-box; 
+  transition: background-color 0.2s ease;
 }
 
 .card-image-wrap img { 
