@@ -10,7 +10,7 @@
         <a href="tel:+380638533794" class="btn-nav phone-link">063 853 37 94</a>
         
         <div class="messenger-links">
-          <a href="https://t.me/changelier_manager" target="_blank" rel="noopener noreferrer" class="messenger-btn telegram-btn">Telegram</a>
+          <a href="https://t.me/chandelier_manager" target="_blank" rel="noopener noreferrer" class="messenger-btn telegram-btn">Telegram</a>
           <a href="viber://chat?number=%2B380638533794" class="messenger-btn viber-btn">Viber</a>
         </div>
       </nav>
@@ -142,7 +142,7 @@
         <div class="modal-body consultation-body">
           <p class="consultation-desc">Оберіть зручний спосіб зв'язку з нами:</p>
           <div class="consultation-buttons">
-            <a href="https://t.me/changelier_manager" target="_blank" rel="noopener noreferrer" class="con-btn telegram">Telegram</a>
+            <a href="https://t.me/chandelier_manager" target="_blank" rel="noopener noreferrer" class="con-btn telegram">Telegram</a>
             <a href="viber://chat?number=%2B380638533794" class="con-btn viber">Viber</a>
             <a href="tel:+380638533794" class="con-btn phone">063 853 37 94</a>
           </div>
@@ -197,14 +197,14 @@
         <div class="modal-body points-choice-body">
           <router-link to="/tracks230v/rails" class="points-choice-card" @click="isTracks230vModalOpen = false">
             <div class="points-choice-img">
-              <img src="/images/trackd.webp" alt="Шинопровід для треків 230В" />
+              <img src="/images/trackImg/track1.webp" alt="Шинопровід для треків 230В" />
             </div>
             <span>Шинопровід для треків 230В</span>
           </router-link>
 
           <router-link to="/tracks230v/fixtures" class="points-choice-card" @click="isTracks230vModalOpen = false">
             <div class="points-choice-img">
-              <img src="/images/trackd.webp" alt="Світильники 230В" />
+              <img src="/images/trackImg/track37.webp" alt="Світильники 230В" />
             </div>
             <span>Світильники 230В</span>
           </router-link>
@@ -228,14 +228,14 @@
         <div class="modal-body points-choice-body">
           <router-link to="/magnetic/rails" class="points-choice-card" @click="isMagneticModalOpen = false">
             <div class="points-choice-img">
-              <img src="/images/tracks.png" alt="Шинопровід для магнітної системи" />
+              <img src="/images/tracksImg/tracks4.webp" alt="Шинопровід для магнітної системи" />
             </div>
             <span>Шинопровід для магнітної системи</span>
           </router-link>
 
           <router-link to="/magnetic/fixtures" class="points-choice-card" @click="isMagneticModalOpen = false">
             <div class="points-choice-img">
-              <img src="/images/tracks.png" alt="Магнітні світильники" />
+              <img src="/images/tracksImg/tracks27.webp" alt="Магнітні світильники" />
             </div>
             <span>Магнітні світильники</span>
           </router-link>
