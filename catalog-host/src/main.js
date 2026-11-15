@@ -1,10 +1,13 @@
 import { createApp } from 'vue'
+import { inject } from '@vercel/analytics'
 import App from './App.vue'
-import router from './router' // <-- Підключаємо наш файл роутера
+import router from './router'
 import './style.css'
+
+inject()
 
 const app = createApp(App)
 
-app.use(router) // <-- Кажемо додатку використовувати роутер
+app.use(router)
 
 app.mount('#app')
