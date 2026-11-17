@@ -86,5 +86,13 @@ export const hangingLedProducts = [
   { id: 85, name: 'Люстра підвісна LED', specs: "Розміри: В - 115 см Ш - 80 см Джерело світла: світлодіодна, 125 W, (6875 lm)", price: 4880, image: '/images/pendantsImg/pendants85.jpg' },
   { id: 86, name: 'Люстра підвісна LED', specs: "Розміри: В - 80 см Ш - 80 см Джерело світла: світлодіодна, 160 W, (8800 lm) Вага: 3.83 kg", price: 9540, image: '/images/pendantsImg/pendants86.jpg' },
   { id: 87, name: 'Люстра підвісна LED', specs: "Розміри: В - 80 см Ш - 80 см Джерело світла: світлодіодна, 160 W, (8800 lm)", price: 7920, image: '/images/pendantsImg/pendants87.jpg' },
-  { id: 88, name: 'Люстра підвісна LED', specs: "Розміри: В - 80 см Ш - 80 см Джерело світла: світлодіодна, 160 W, (8800 lm)", price: 7920, image: '/images/pendantsImg/pendants88.jpg' }
+  { id: 88, name: 'Люстра підвісна LED', specs: "Розміри: В - 80 см Ш - 80 см Джерело світла: світлодіодна, 160 W, (8800 lm)", price: 7920, image: '/images/pendantsImg/pendants88.jpg' },
+  { id: 89, name: 'Люстра підвісна LED', specs: "75 Вт 600x1100 мм", price: 1850, image: '/images/pendantsImg/pendants89.webp' },
+  { id: 90, name: 'Люстра підвісна LED', specs: "1250 × Ø120 × 1000 мм 50 Вт 3200 лм", price: 6664, image: '/images/pendantsImg/pendants90.webp' },
+  { id: 91, name: 'Люстра підвісна LED', specs: "120 × 25 × 80 мм G9*11", price: 6338, image: '/images/pendantsImg/pendants91.webp' },
+  { id: 92, name: 'Люстра підвісна LED', specs: "95 × 45 × 80 мм G9*10", price: 7328, image: '/images/pendantsImg/pendants92.webp' },
+  { id: 93, name: 'Люстра підвісна LED', specs: "700 × 500 × 1000 мм 130 Вт 7150 лм", price: 5823, image: '/images/pendantsImg/pendants93.webp' },
+  { id: 94, name: 'Люстра підвісна LED', specs: "700 × 500 × 1000 мм 180 Вт 9900 лм", price: 6022, image: '/images/pendantsImg/pendants94.webp' },
+  { id: 95, name: 'Люстра підвісна LED', specs: "600 × 1000 мм 126 Вт 6930 лм", price: 5578, image: '/images/pendantsImg/pendants95.webp' },
+  { id: 96, name: 'Люстра підвісна LED', specs: "800 × 1000 мм 226 Вт 12430 лм", price: 7806, image: '/images/pendantsImg/pendants96.webp' },
 ];

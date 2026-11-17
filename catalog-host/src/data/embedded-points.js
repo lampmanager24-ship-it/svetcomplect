@@ -18,5 +18,12 @@ export const embeddedPointsProducts = [
   { id: 17, name: 'Світильник точковий LED', specs: "GX53 105*105*36 мм", price: 189, image: '/images/pointsImg/point13.jpg' },
   { id: 18, name: 'Світильник точковий LED', specs: "GX53 105*105*36 мм", price: 189, image: '/images/pointsImg/point14.jpg' },
   { id: 19, name: 'Світильник точковий LED', specs: "MR16 G5.3 92*92*30 мм", price: 225, image: '/images/pointsImg/point15.jpg' },
-  { id: 20, name: 'Світильник точковий LED', specs: "MR16 G5.3 92*92*30 мм", price: 225, image: '/images/pointsImg/point16.jpg' }
+  { id: 20, name: 'Світильник точковий LED', specs: "MR16 G5.3 92*92*30 мм", price: 225, image: '/images/pointsImg/point16.jpg' },
+  { id: 21, name: 'Світильник точковий LED', specs: "110*35 GX53 вбудований", price: 215, image: '/images/pointsImg/point21.jpg' },
+  { id: 22, name: 'Світильник точковий LED', specs: "110*35 GX53 вбудований", price: 215, image: '/images/pointsImg/point22.jpg' },
+  { id: 23, name: 'Світильник точковий LED', specs: "85*20 мм 4000k 9w", price: 143, image: '/images/pointsImg/point23.jpg' },
+  { id: 24, name: 'Світильник точковий LED', specs: "170*20 мм 4000k 24w", price: 276, image: '/images/pointsImg/point24.jpg' },
+  { id: 25, name: 'Світильник точковий LED', specs: "225*20 мм 4000k 32w", price: 435, image: '/images/pointsImg/point25.jpg' },
+  { id: 26, name: 'Світильник точковий LED', specs: "121*28 мм 6500k 8w", price: 92, image: '/images/pointsImg/point26.jpg' },
+  { id: 27, name: 'Світильник точковий LED', specs: "145*28 мм 6500k 12w", price: 124, image: '/images/pointsImg/point27.jpg' },
 ];
