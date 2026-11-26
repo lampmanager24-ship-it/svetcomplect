@@ -22,19 +22,4 @@ export const gxProducts = [
   { id: 21, name: 'Люстра під лампу', specs: "gx53x6 750x130 мм", price: 1750, image: '/images/gxImg/gx1.webp' },
   { id: 22, name: 'Люстра під лампу', specs: "gx53x4 580x580x150 мм", price: 1990, image: '/images/gxImg/gx2.webp' },
   { id: 23, name: 'Люстра під лампу', specs: "gx53x4 580x580x150 мм", price: 1990, image: '/images/gxImg/gx3.webp' },
-  { id: 24, name: 'Люстра під лампу', specs: "790mm х 490mm х 45mm 6xGX53", price: 2502, image: '/images/gxImg/gx24.jpeg' },
-  { id: 25, name: 'Люстра під лампу', specs: "790mm х 490mm х 45mm 6xGX53", price: 2677, image: '/images/gxImg/gx25.jpeg' },
-  { id: 26, name: 'Люстра під лампу', specs: "4xGX53 460x460", price: 1957, image: '/images/gxImg/gx26.jpeg' },
-  { id: 27, name: 'Люстра під лампу', specs: "6xGX53 702x654", price: 2553, image: '/images/gxImg/gx27.jpeg' },
-  { id: 28, name: 'Люстра під лампу', specs: "6xGX53 639x595", price: 2167, image: '/images/gxImg/gx28.jpeg' },
-  { id: 29, name: 'Люстра під лампу', specs: "6xGX53 702x654", price: 2553, image: '/images/gxImg/gx29.jpeg' },
-  { id: 30, name: 'Люстра під лампу', specs: "3xGX53 425x465mm", price: 0, image: '/images/gxImg/gx30.jpeg' },  // ЦІНА НЕ ВКАЗАНА
-  { id: 31, name: 'Люстра під лампу', specs: "3xGX53 425x465mm", price: 0, image: '/images/gxImg/gx38.jpeg' },  // ЦІНА НЕ ВКАЗАНА
-  { id: 32, name: 'Люстра під лампу', specs: "6xGX53 639x595", price: 2167, image: '/images/gxImg/gx31.jpeg' },
-  { id: 33, name: 'Люстра під лампу', specs: "8xGX53 1030x1030mm", price: 2864, image: '/images/gxImg/gx32.jpeg' },
-  { id: 34, name: 'Люстра під лампу', specs: "8xGX53 1030x1030mm", price: 2864, image: '/images/gxImg/gx33.jpeg' },
-  { id: 35, name: 'Люстра під лампу', specs: "6xGX53 570x570mm", price: 2288, image: '/images/gxImg/gx34.jpeg' },
-  { id: 36, name: 'Люстра під лампу', specs: "6xGX53 570x570mm", price: 2288, image: '/images/gxImg/gx35.jpeg' },
-  { id: 37, name: 'Люстра під лампу', specs: "3xGX53 390x390mm", price: 1328, image: '/images/gxImg/gx36.jpeg' },
-  { id: 38, name: 'Люстра під лампу', specs: "3xGX53 390x390mm", price: 1328, image: '/images/gxImg/gx37.jpeg' },
 ];

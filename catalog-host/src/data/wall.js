@@ -29,8 +29,4 @@ export const wallProducts = [
   { id: 28, name: 'Світильник настінний LED', specs: "Розміри: Ш - 25 см Д - 70 см Джерело світла: світлодіодна, 25 W, (1375 lm)", price: 1180, image: '/images/wallImg/wall21.jpg' },
   { id: 29, name: 'Світильник настінний LED', specs: "Розміри: Ш - 8 см Д - 80 см Джерело світла: світлодіодна, 30 W, (1650 lm)", price: 1280, image: '/images/wallImg/wall22.jpg' },
   { id: 30, name: 'Світильник настінний LED', specs: "Розміри: Ш - 12 см Д - 60 см Джерело світла: світлодіодна, 14 W, (770 lm)", price: 1210, image: '/images/wallImg/wall23.jpg' },
-  { id: 31, name: 'Світильник настінний LED', specs: "10 W 1000 Lm 3000/4000/6000K 413mm х 100mm х 68mm", price: 1439, image: '/images/wallImg/wall31.jpeg' },
-  { id: 32, name: 'Світильник настінний LED', specs: "10 W 1000 Lm 3000/4000/6000K 413mm х 100mm х 68mm", price: 1439, image: '/images/wallImg/wall32.jpeg' },
-  { id: 33, name: 'Світильник настінний LED', specs: "5W 3000-4000-6000K 395mm х 100mm х 68mm", price: 938, image: '/images/wallImg/wall33.jpeg' },
-  { id: 34, name: 'Світильник настінний LED', specs: "5W 3000-4000-6000K 395mm х 100mm х 68mm", price: 938, image: '/images/wallImg/wall34.jpeg' },
 ];
